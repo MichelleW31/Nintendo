@@ -1,7 +1,14 @@
-var total = 0;
+$(document).ready(function(){
+  //-------------------------
+$(".playbuttons").on("click",function(){
+  var push = $(this).addClass("push");
+  setTimeout(function() {
+    push.removeClass("push");
+}, 200);
+})
 
-var number = 3
-for(i=0; i<=number; i++){
-  total += i;
-}
-console.log(total);
+$("i").on("click", function(){
+  console.log("pad clicked");
+})
+  //-------------------------
+});

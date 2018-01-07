@@ -25,22 +25,47 @@
     background-color:#242424;
     border-radius:3px;
     display:flex;
+    padding-left:20px
 }
 
 /*Controller pad*/
-#pad{
+#left{
+  width:200px;
+  display:flex;
+  position:relative;
+}
+#pad, #pad2{
   background: linear-gradient(to right, #121212 , #1c1c1c,#121212 );
     background-color:#121212;
-    width:140px;
+    width:90px;
     height:47px;
     border:1px solid #ccc5c2;
-    border-radius:2px;
-    margin:80px 0 0 23px;
+    border-radius:2px 0px 0px 2px;
+    margin:80px 0 0 0px;
     -webkit-box-shadow: 0px 6px 0px #000000;
     -moz-box-shadow: 0px 6px 0px #000000;
     box-shadow: 0px 4px 0px #000000;
     display:flex;
     justify-content:space-around;
+}
+
+#circle{
+  width:30px;
+  height:30px;
+  background-color:#232222;
+  margin:91px 0 0 0px;
+  border-radius:50%;
+  position:absolute;
+  left:76px;
+  box-shadow: inset 0px -2px 2px 1px #020202 ;
+}
+
+#pad{
+  border-right:none;
+}
+
+#pad2{
+  border-left:none;
 }
 
 .material-icons.md-48 { 
@@ -151,6 +176,7 @@ h2{
   justify-content:center;
   align-items:center;
   border-radius:3px;
+  position:relative;
 }
 
 .playbuttons{
@@ -161,4 +187,34 @@ h2{
   -webkit-box-shadow: 0px 6px 0px #000000;
     -moz-box-shadow: 0px 6px 0px #000000;
     box-shadow: 1px -2px 0px #500000;
+}
+
+.letter{
+  position:absolute;
+  top:65px;
+  right:-1px;
+  color:#db0000;
+  font-family:"Nintendo";
+  font-weight:800;
+  font-size:15px;
+}
+
+/*Button clicked*/
+
+.push{
+  box-shadow: inset 0px 0px 8px rgba(0,0,0,.5);
+}
+
+/*Pad clicked*/
+
+#pad:hover{
+  box-shadow: inset 2px 0px 0px 0px rgba(0,0,0,.5);
+  border:1px solid #656260;
+  border-right:none;
+}
+
+#pad2:hover{
+  box-shadow: inset -2px 0px 0px 0px rgba(0,0,0,.5);
+  border:1px solid #656260;
+  border-left:none;
 }
