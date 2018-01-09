@@ -57,10 +57,10 @@
   border-radius:50%;
   position:absolute;
   left:76px;
-  box-shadow: inset 0px -2px 2px 1px #020202;
+  box-shadow: inset 0px -2px 2px 1px #100d0d;
 }
 
-#pad:hover, #pad2:hover{
+#pad:hover, #pad2:hover, .buttons:hover, .playbuttons:hover{
   cursor:pointer;
 }
 
@@ -165,8 +165,6 @@ h2{
   text-align:center;
 }
 
-
-
 #buttons{
   display:flex;
   justify-content:space-around;
@@ -203,10 +201,14 @@ h2{
   font-size:15px;
 }
 
-/*Button clicked*/
+/*Red Button clicked*/
 
 .push{
   box-shadow: inset 0px 0px 8px rgba(0,0,0,.5);
+}
+
+.consolepush{
+  box-shadow: 0px 1px 0px #292929;
 }
 
 /*Pad clicked*/
@@ -217,7 +219,4 @@ h2{
   border-right:none;
 }
 
-#left:active #circle{
-  box-shadow: inset 2px -2px 2px 1px #020202;
-}
 
