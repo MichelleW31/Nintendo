@@ -11,7 +11,7 @@
 #controllero{
     margin:60px auto;
     padding-top:1px;
-    width:630px;
+    width:637px;
     height:260px;
     background-color:#ccc5c2;
     border-radius:4px;
@@ -28,59 +28,106 @@
     padding-left:20px
 }
 
-/*Controller pad*/
+/*Controller D pad*/
 #left{
-  width:200px;
+  width:180px;
   display:flex;
   position:relative;
 }
-#pad, #pad2{
+
+#uppad, #downpad ,#rightpad, #leftpad{
   background: linear-gradient(to right, #121212 , #1c1c1c,#121212 );
     background-color:#121212;
-    width:90px;
+    width:50px;
     height:47px;
     border:1px solid #ccc5c2;
     border-radius:2px 0px 0px 2px;
     margin:80px 0 0 0px;
-    -webkit-box-shadow: 0px 6px 0px #000000;
-    -moz-box-shadow: 0px 6px 0px #000000;
-    box-shadow: 0px 4px 0px #000000;
-    display:flex;
-    justify-content:space-around;
+    position:absolute;
 }
 
-#circle{
-  width:30px;
-  height:30px;
-  background-color:#232222;
-  margin:91px 0 0 0px;
-  border-radius:50%;
-  position:absolute;
-  left:76px;
-  box-shadow: inset 0px -2px 2px 1px #100d0d;
-}
-
-#pad:hover, #pad2:hover, .buttons:hover, .playbuttons:hover{
-  cursor:pointer;
-}
-
-#pad{
+#leftpad{
+  left:17px;
   border-right:none;
 }
 
-#pad2{
-  border-left:none;
+#rightpad{
+ left:117px;
+ border-right:none;
+ transform:rotate(180deg);
 }
+
+#uppad{
+  top:30px;
+  left:68px;
+}
+
+#downpad{
+  top:129px;
+  left:68px;
+  transform:rotate(180deg);
+}
+
+#uppad, #downpad{
+  width:47px;
+  height:50px;
+  margin:0;
+  border-bottom:none;
+}
+
+#middle{
+  width:50px;
+  height:48px;
+  background: linear-gradient(to right, #121212 , #1c1c1c,#121212 );
+  position:relative;
+  top:81px;
+  left:67px;
+}
+
+#circle{
+  width:37px;
+  height:37px;
+  background-color:#232222;
+  border-radius:50%;
+  position:absolute;
+  top:6px;
+  left:6px;
+  box-shadow: inset 0px -2px 2px 1px #100d0d;
+  z-index:2;
+}
+
+#uppad:hover, #downpad:hover, #leftpad:hover, #rightpad:hover, .buttons:hover, .playbuttons:hover{
+  cursor:pointer;
+}
+
 
 .material-icons.md-48 { 
     font-size: 48px;
     color:#303030;
 }
 
+/*Arrows on dpad*/
+
 .left{
+  position:absolute;
   transform:rotate(180deg);
 }
 
+.up{
+  position:absolute;
+  transform:rotate(-90deg);
+}
+
+.down{
+  position:absolute;
+  transform:rotate(-90deg);
+}
+
+.right{
+  position:absolute;
+  transform:rotate(180deg);
+}
+  
 /*Console pad*/
 
 #console{

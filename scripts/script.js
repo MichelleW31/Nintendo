@@ -21,7 +21,7 @@ $(".buttons").on("click",function(){
 //Dpad click
 //right
 var circle = $("#circle");
-$("#pad2 i").on("click", function(){
+$("#rightpad i").on("click", function(){
   circle.css("box-shadow", "inset -2px -2px 2px 1px #100d0d");
   setTimeout(function() {
     circle.css("box-shadow", "inset 0px -2px 2px 1px #100d0d");
@@ -29,7 +29,7 @@ $("#pad2 i").on("click", function(){
 })
 
 //left
-$("#pad i").on("click", function(){
+$("#leftpad i").on("click", function(){
 
 circle.css("box-shadow", "inset 2px -2px 2px 1px #100d0d");
 setTimeout(function() {
@@ -37,6 +37,21 @@ setTimeout(function() {
 }, 200);
 })
 
+//up
+$("#uppad i").on("click", function(){
+  circle.css("box-shadow", "inset 0px 2px 2px 1px #100d0d");
+  setTimeout(function(){
+    circle.css("box-shadow", "inset 0px -2px 2px 1px #100d0d");
+  }, 200);
+})
+
+//downpad
+$("#downpad i").on("click", function(){
+  circle.css("box-shadow", "inset 0px -4px 2px 1px #100d0d");
+  setTimeout(function(){
+    circle.css("box-shadow", "inset 0px -2px 2px 1px #100d0d");
+  }, 200);
+})
 
   //-------------------------
 });
